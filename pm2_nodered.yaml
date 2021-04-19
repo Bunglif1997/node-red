@@ -1,0 +1,8 @@
+apps:
+- name: nodered
+  script: "./node_modules/node-red/red.js"
+  args: ["-v", "-u", "."]
+  env:
+    PM2: true
+    IP_BROKER: 10.10.10.198
+  merge_logs: true

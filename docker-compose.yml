@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nodered:
+    build: .
+    ports:
+      - "1880:1880"
+    restart: always
+    environment:
+      - TZ
+      - IP_BROKER=mqtt
+      - DOCKER=true
+      - PORT=1880
+    hostname: nodered
